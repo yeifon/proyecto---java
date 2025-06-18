@@ -232,7 +232,25 @@ input:focus~label {
 input:focus~label {
   top: -5px;
 }
+/* Animación label arriba si hay texto o foco */
+.inputbox input:focus ~ label,
+.inputbox input:not(:placeholder-shown) ~ label {
+  top: -5px;
+  font-size: 0.9em;
+  color: #fff;
+}
 
+/* Validación visual: borde rojo si es inválido */
+.inputbox input:invalid {
+  border-bottom: 2px solid #ff4d4d;
+}
+
+/* Mensaje de error JSF */
+.jsf-message {
+  color: #ff4d4d;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
 .inputbox input {
   width: 100%;
   height: 50px;
@@ -275,7 +293,7 @@ select.material-control-login{
 select.material-control-login:hover{
   cursor: pointer;
 }
-button {
+.button {
   width: 100%;
   height: 40px;
   border-radius: 40px;

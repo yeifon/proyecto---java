@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+        <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+        <link href="Resources/css/Estilo3.css" rel="stylesheet" type="text/css"/>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+        <link rel="icon" href="Resources/imagen/Logo.png"/>
+        <title>LearnMate</title>
+    </h:head>
+    <h:body>
+        <header class="header">
+            <a href="" class="logo"><img src="Resources/imagen/Logo.png" alt="" style="margin: 0;"/>LearnMate</a>
+
+            <input type="checkbox" id="check"/>
+            <label for="check" class="icons">
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-x' id="close-icon"></i>
+            </label>
+
+            <nav class="navbar">
+                <a href="index.html" style="--i:0;">Inicio</a>
+                <a href="nosotros.html" style="--i:1;">Acerca de</a>
+                <a href="error500.html" style="--i:2;">Programas</a>
+                <a href="contacto.html" style="--i:3;">Contacto</a>
+                <a href="pqrs.html" style="--i:5;">PQRS</a>
+                <a href="login.html" style="--i:4;">Ingresar</a>
+            </nav>
+        </header>
+
+        <div class="box">
+
+            <h:form>
+                <center><img src="Resources/imagen/Logo.png" alt="" style="margin-top: 30px ; height: 70px;"/></center>
+                <h2>Inicia Sesión </h2>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <h:inputText id="iTexUsuario" value="#{login.usuario}" required="true" requiredMessage="El campo es obligatorio"/>
+                    <label for="">Usuario:</label>
+                </div>
+
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <h:inputSecret id="idTexpassword" value="#{login.contrasenna}" required="true" requiredMessage="El campo es obligatorio"/>
+                    <label for="">Contraseña:</label>
+                </div>
+
+                <div class="forget">
+                    <label for="">
+                        <input type="checkbox"/>Recordar
+                    </label>
+                    <label for="">
+                        Olvidar Contraseña
+                    </label>
+                </div>
+                
+                <h:messages globalOnly="true" style="color: red"/>
+                <br/>
+
+                <div class="button">
+                    <h:commandButton value="Iniciar Sesiòn" action="#{login.iniciarSesion()}"/>
+                </div>
+
+
+                <div class="register">
+                    <p>¿No Tienes Una Cuenta ? <a href="admin.html">Registrar</a></p>
+                </div>
+            </h:form>
+        </div>
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <ul class="social-icon">
+                <li class="icon-elem">
+                    <a href="" class="icon">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                </li>
+                <li class="icon-elem">
+                    <a href="" class="icon">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+                <li class="icon-elem">
+                    <a href="" class="icon">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+                <li class="icon-elem">
+                    <a href="" class="icon">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    </a>
+                </li>
+                <li class="icon-elem">
+                    <a href="" class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu">
+                <li class="menu-elem">
+                    <a href="index.html" class="menu-icon">Inicio</a>
+                </li>
+                <li class="menu-elem">
+                    <a href="" class="menu-icon">Equipo</a>
+                </li>
+                <li class="menu-elem">
+                    <a href="error400.html" class="menu-icon">Error 404</a>
+                </li>
+                <li class="menu-elem">
+                    <a href="error500.html" class="menu-icon">Error 500</a>
+                </li>
+                <li class="menu-elem">
+                    <a href="mapadesitio.html" class="menu-icon">Mapa del sitio</a>
+                </li>
+            </ul>
+
+            <p>Bogota - Colombia email:correointitucion@educacionbogota.edu.co</p>
+            <p>Copyright 2024 <samp style="color: blue;">Colegio de Bogota IED</samp></p>
+        </footer>
+
+        <script type="module" src=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js ">
+        </script>
+        <script nomodule="" src=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js ">
+        </script>
+
+
+    </h:body>
+</html>
